@@ -1,0 +1,17 @@
+h1 {
+    font-size: 240px;
+    line-height: 32px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#front{
+    font-weight: bold;
+    font-size: larger; 
+    font-style: italic; 
+    font-family: 'Times New Roman', Times, serif;
+}

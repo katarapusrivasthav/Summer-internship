@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Library Management System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script text="text/javascript" src="../js/common.js"></script>
+    <link href="../css/fp.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-img {
+            /* The image used */
+            background-image: url('../images/slider22.jpg');
+
+            /* Control the height of the image */
+            min-height: 109%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Add styles to the form container */
+        .container {
+            position: absolute;
+            right: 0;
+            margin: 20px;
+            max-width: 50%;
+            padding: 16px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit button */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a href="user.html" class="navbar-brand"><a class="nav-link" href="user.html"><img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Gandhi_Institute_of_Technology_and_Management_logo.jpg/220px-Gandhi_Institute_of_Technology_and_Management_logo.jpg"
+                    width="40"></a>
+            <a href="user.html" class="navbar-brand">Library Management System</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse1">
+                <div class="navbar-nav">
+                    <a href="contactus.html" class="nav-item nav-link ">Contact Us</a>
+                    <a href="aboutus.html" class="nav-item nav-link">About Us</a>
+                    <a href="feedback.html" class="nav-item nav-link active">Feedback</a>
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link"><i class="far fa-x fa-user"></i></a>
+                    <a href="#" id="rollId" class="nav-item nav-link"></a>
+                    <a href="#" class="nav-item nav-link" id="logout">Logout
+                        <i class="fas fa-md fa-sign-out-alt"></i></a>
+                </div>
+            </div>
+    </nav>
+
+    <div class="bg-img">
+        <div class="container">
+
+            <div class="row " style="background-color: #ffe6ea">
+
+                <form role="form" class="col-md-9 go-right">
+                    <h1>Feedback Form</h1>
+                    <h5>We welcome for your feedback and we will try to implement it into our website.</h5>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" class="form-control" required
+                            placeholder="Full name in Id card">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input id="email" name="email" type="email" class="form-control" required
+                            placeholder="Please mention only Gitam mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" class="form-control" required
+                            placeholder="Mobile Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="phone" class="form-control" style="height: 150px"
+                            required></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" data-toggle="modal"
+                                data-target="#myModal">Submit</button>
+
+
+
+                            <!-- The Modal -->
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Feed Back</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Thanks for submitting your feedback. We will try to bring changes mentioned
+                                            in message.
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

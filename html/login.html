@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../js/login.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link href="../css/login.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="form_bg">
+                <form>
+                    <img style="margin-left: 6%;" src="https://www.gitam.edu/assets/images/GITAM_logo.png" width="400"
+                        height="120">
+                    <!-- <h2 class="text-center">Login </h2> -->
+
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <input type="email" class="form-control" id="userid" placeholder="User id">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd" placeholder="Password">
+
+                    </div>
+                    <span id="errorname"></span>
+                    <div class="align-center">
+                        <button class="btn btn-lg btn-primary btn-block" id="login">Login</button>
+                    </div>
+
+
+                    <div class="align-center" style="margin-top: 1rem;margin-bottom: 1.5rem;">
+
+                        <button type="button" class="btn btn-link" data-toggle="modal"
+                            data-target="#myModal"><i class="fa fa-key" aria-hidden="true"></i>Forget Password?</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title align-center">Forget Password</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Please Contact adminstrator <br>Or<br>  CATS department to change or reset your password!
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
